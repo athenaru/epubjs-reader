@@ -8887,11 +8887,18 @@ var IframeView = function () {
 				this.displayed = false;
 
 				this.removeListeners();
+				this.contents.destroy();
 
 				this.stopExpanding = true;
 				this.element.removeChild(this.iframe);
 
-				this.iframe = null;
+				if (this.pane) {
+					this.pane.element.remove();
+					this.pane = undefined;
+				}
+
+				this.iframe = undefined;
+				this.contents = undefined;
 
 				this._textWidth = null;
 				this._textHeight = null;

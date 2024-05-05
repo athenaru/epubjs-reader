@@ -34,9 +34,6 @@
         <!-- Full Screen -->
         <script src="js/libs/screenfull.min.js"></script>
 
-        <!-- Render -->
-        <script src="js/epub.js"></script>
-
         <!-- Reader -->
         <script src="js/reader.js"></script>
 
@@ -84,28 +81,26 @@
           <div id="opener">
             <a id="slider" class="icon-menu">Menu</a>
           </div>
-
           <div id="metainfo">
             <span id="book-title"></span>
             <span id="title-seperator">&nbsp;&nbsp;–&nbsp;&nbsp;</span>
             <span id="chapter-title"></span>
-          </div>
+            </div>
 
           <div id="title-controls">
             <a id="bookmark" class="icon-bookmark-empty">Bookmark</a>
             <a id="setting" class="icon-cog">Settings</a>
             <a id="fullscreen" class="icon-resize-full">Fullscreen</a>
-          </div>
-
+            </div>
         </div>
 
         <div id="divider"></div>
         <div id="upload"><input type="file" id="input-path"></div>
         <div id="prev" class="arrow">‹</div>
-        <div id="viewer"></div>
+        <div id="viewer" class="spreads"></div>
         <div id="next" class="arrow">›</div>
 
-        <div id="loader"><img src="img/loader.gif"></div>
+        <!-- <div id="loader"><img src="img/loader.gif"></div> -->
       </div>
 
       <div class="modal md-effect-1" id="settings-modal">
@@ -122,6 +117,9 @@
 
       <div class="overlay"></div>
 
+      <!-- Render -->
+      <script src="js/epub.js"></script>
+      
       <!-- File Input -->
       <script src="js/input.js"></script>
 
